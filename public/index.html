@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Special+Elite&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ENTRY -->
+  <div id="entry-screen">
+    <div class="envelope">
+      <div class="brand">Missive</div>
+      <div class="eyebrow">Correspondance privée</div>
+      <h1>Ouvrir le courrier</h1>
+      <div class="sub">Deux personnes, un fil de lettres</div>
+
+      <div class="field">
+        <label for="room-code">Code du duo</label>
+        <input id="room-code" type="text" placeholder="ex. lucie-et-marc" autocomplete="off">
+      </div>
+      <div class="hint">Choisissez un code connu de vous deux seulement — il ouvre la même correspondance des deux côtés.</div>
+
+      <div class="field">
+        <label for="user-name">Votre prénom</label>
+        <input id="user-name" type="text" placeholder="ex. Lucie / Marc" autocomplete="off">
+      </div>
+
+      <button type="button" class="seal-btn" id="enter-btn"><span>Entrer</span></button>
+      <div class="error-msg" id="entry-error"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

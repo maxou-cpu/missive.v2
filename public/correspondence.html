@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missive — Correspondance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Special+Elite&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="correspondence-page">
+<div id="app">
+  <div id="corr-screen">
+    <div class="topbar">
+      <div>Missive — <span class="who" id="tb-code"></span></div>
+      <div>Connecté·e en tant que <span class="who" id="tb-name"></span> &nbsp;
+        <button type="button" id="leave-btn">Changer</button>
+      </div>
+      <div class="storage-status" id="storage-status" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="tabs">
+      <button type="button" id="tab-write" class="active">Écrire</button>
+      <button type="button" id="tab-library">Bibliothèque</button>
+    </div>
+
+    <div class="layout show-write" id="layout">
+      <div id="write-pane" class="pane">
+        <h2>Nouvelle lettre</h2>
+        <div class="sub">Elle sera datée et rangée dans la bibliothèque commune.</div>
+        <textarea id="letter-text" placeholder="Chère..."></textarea>
+        <div class="write-footer">
+          <span class="char-count" id="char-count">0 caractère</span>
+          <button type="button" class="send-seal" id="send-btn" disabled><span>Sceller<br>&amp; envoyer</span></button>
+        </div>
+      </div>
+      <div id="library-pane" class="pane">
+        <h2>La bibliothèque</h2>
+        <div id="thread-container"><div class="empty-shelf">Aucune lettre pour l'instant. La première ouvrira le fil.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
