@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "node --check server.js && node --check public/app.js && node -e \"for (const file of ['public/index.html', 'public/correspondence.html', 'public/styles.css']) require('node:fs').accessSync(file)\""
+    "typecheck": "tsc -p tsconfig.public.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "build": "tsc -p tsconfig.public.json && tsc -p tsconfig.server.json && node --check server.js && node --check public/app.js && node -e \"for (const file of ['public/index.html', 'public/correspondence.html', 'public/styles.css']) require('node:fs').accessSync(file)\""
   },
   "engines": {
     "node": ">=18"
@@ -29,5 +30,9 @@
     "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.3",
     "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
   }
 }

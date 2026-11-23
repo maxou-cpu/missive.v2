@@ -38,9 +38,10 @@ npm run build
 ## Utiliser la correspondance à deux
 
 Les deux personnes doivent ouvrir l'application servie par le même backend et
-entrer le même code de duo. Le serveur local écoute uniquement sur l'ordinateur
-où il est lancé : `localhost` n'est pas accessible depuis l'appareil de l'autre
-personne. Pour échanger depuis des appareils différents, il faut déployer le
+entrer le même code de duo. Le serveur écoute sur toutes les interfaces réseau
+(`0.0.0.0`) : `localhost` reste accessible sur l'ordinateur où il est lancé, et
+un port rendu public par l'environnement d'hébergement peut être joint depuis
+l'extérieur. Pour échanger depuis des appareils différents, il faut déployer le
 frontend et ce backend ensemble sur un hébergeur Node.js avec un disque
 persistent. Firebase Hosting seul ne lance pas `server.js`.
 

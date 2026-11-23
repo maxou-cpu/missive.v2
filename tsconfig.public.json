@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2020",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "outDir": "public",
+    "rootDir": "public",
+    "strict": false,
+    "skipLibCheck": true,
+    "removeComments": false
+  },
+  "include": ["public/app.ts"],
+  "exclude": ["node_modules"]
+}
